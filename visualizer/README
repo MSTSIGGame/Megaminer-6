@@ -1,0 +1,49 @@
+== Dependencies ==
+To compile and run this you will need qt and the OpenGL libraries for Qt.
+These dependencies are already satisfied by campus computers so you don't
+have to do anything.  If you're installing at home you will need to install
+these.
+
+On ubuntu, you'll be running:
+<todo>ADD APTITUDE COMMAND FOR INSTALLING QT</todo>
+
+== Compiling ==
+
+If you have just pulled from the repository for the first time you will have
+to run qmake-qt4 on campus machines and qmake at home.
+
+What this does is looks at the visualizer.pro file which contains any
+configuration details for the Makefile and generates the Makefile.
+
+If you ever pull from the repository again, it is probably good practice
+to go ahead and run qmake again.  Once your makefile is generated run 'make'
+to compile.  It should automatigically compile everything that was specified
+in the visualizer.pro file.
+
+The sexp library for the parser needs to be compiled, so if you get errors
+that you're missing sexp.a, go to the parser directory and run make.
+
+== Modifiying visualizer.pro ==
+
+If you ever add a source/header file to this project, add an additional
+library, or anything else compiler related, you will have to modify
+visualizer.pro.
+
+If you add a header file, such as example.h, go to the visalizer.pro file
+and add the line:
+HEADERS += example.h
+
+Similarly for a source file, example.cpp, you would add:
+SOURCES += example.cpp
+
+If you have a source or header file which is operating system specific, add it
+in the following manner:
+
+win32 {
+  SOURCES += winExample.cpp
+  HEADERS += winExample.h
+}
+unix {
+  SOURCES += unixExample.cpp
+  HEADERS += unixExample.h
+}

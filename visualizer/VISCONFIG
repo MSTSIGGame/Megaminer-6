@@ -1,0 +1,83 @@
+# Next frame every X ms
+DefaultSpeed = 250
+# Default Unit Size On Load: X pixels
+UnitSize = 32
+
+# Default Board Height
+BoardHeightPx = 640
+# Default Board Height
+BoardWidthPx = 1280
+# Do you wish to pause the game when loading
+PauseOnLoad = 0
+
+#Shows the map grid on startup
+ MapGrid = Yes
+
+# TEXTURES
+
+## Bots
+
+### Red Bots
+RedActionFile = "textures/Action 2a 512.png"
+RedBuilderFile = "textures/Builder 2a 512.png"
+RedCannonFile = "textures/Cannon 2a 512.png"
+RedDamageFile = "textures/Damage 2a 512.png"
+RedEngineFile = "textures/Engine 2a 512.png"
+RedForceFile = "textures/Force 2a 512.png"
+RedFrameFile = "textures/Build Frame 2.png"
+RedAttackFile = "textures/Bullet 2 256.png"
+RedBuildAnimFile = "textures/Heal Graphic copy.png"
+RedJointFile = "textures/Joint 2.png"
+
+### Blue Bots
+BluActionFile = "textures/Action 1a 512.png"
+BluBuilderFile = "textures/Builder 1a 512.png"
+BluCannonFile = "textures/Cannon 1a 512.png"
+BluDamageFile = "textures/Damage 1a 512.png"
+BluEngineFile = "textures/Engine 1a 512.png"
+BluForceFile = "textures/Force 1a 512.png"
+BluFrameFile = "textures/Build Frame 1.png"
+BluAttackFile = "textures/Bullet 1 256.png"
+BluBuildAnimFile = "textures/Heal Graphic copy.png"
+BluJointFile = "textures/Joint 1.png"
+
+## Other
+
+# Default Background Image
+defBGFileName = "textures/Ground Asphault 64.png"
+# Default Grid Image
+gridFileName = "textures/grid.png"
+
+# Default Wall Image Full Health
+wall100FileName = "textures/Walls Life 100.png"
+# Default Wall Image 75% Health
+wall75FileName = "textures/Walls Life 75.png"
+# Default Wall Image 50% Health
+wall50FileName = "textures/Walls Life 50.png"
+# Default Wall Image 25% Health
+wall25FileName = "textures/Walls Life 25.png"
+
+# Explode File 
+ExplodeFile = "textures/Fiery Doom.png"
+
+# Time to click the mouse to register it as a double click
+doubleClickTime = 275
+
+
+# FONT STUFF
+
+# Default Font Texture
+defaultFont = "textures/font1.png"
+# File containing list of widths for each font character
+defaultFontWidths = "textures/font1.dat"
+
+# ARENA STUFF
+
+# Is This the Arena?
+ArenaMode = 0
+# Time(in ms) we wish to display who the winner is
+WinnerScreenTime = 5000
+# Initial Screen Time
+InitializationTime = 3000
+# Show the Init Screen?
+ShowInitScreen = Yes 

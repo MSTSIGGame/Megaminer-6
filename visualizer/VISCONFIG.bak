@@ -1,0 +1,32 @@
+# Next frame every X ms
+DefaultSpeed = 150
+# Default Unit Size On Load: X pixels
+UnitSize = 32
+# Default Background Image
+defBGFileName = "background.png"
+# Default Wall Image
+wallFileName = "wall.png"
+# Default Grid Image
+gridFileName = "grid.png"
+# Default Board Height 
+BoardHeightPx = 640
+# Default Board Height
+BoardWidthPx = 1280
+# Do you wish to pause the game when loading
+PauseOnLoad = 0
+
+
+# FONT STUFF
+
+# Default Font Texture
+defaultFont = "font1.png"
+# File containing list of widths for each font character
+defaultFontWidths = "font1.dat"
+
+# ARENA STUFF
+
+# Is This the Arena?
+ArenaMode = 0
+# Time(in ms) we wish to display who the winner is
+WinnerScreenTime = 1500
+
