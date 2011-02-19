@@ -1,0 +1,23 @@
+Let's start with a concept overview. You create the AI for this game in AI.<language>. After the AI is how you want it, you build the client. To have the AIs fight, you will need to run the server and connect to clients to it. The server runs the game to completion and outputs a gamelog, a record of everything that went on in the game. The visualizer then takes that gamelog and plays it for you in a format that is actually interesting and exciting to watch.
+
+So, the first order of business is compiling all the pieces you will need:
+1) Navigate to the directory for the client of your language. 
+2) Compile the client using 'make' with no arguments
+
+3) Navigate to the visualizer directory
+4a) If on windows, the visualizer has already been compiled. Do nothing.
+4b) If on linux, make sure qt4 development tools have been installed, then run qmake-qt4 to generate the makefile required. Then run 'make' to build the visualizer.
+
+Now that everything works, you can run a game!
+1) Navigate to the server directory and start a game by running 'python main.py'
+2) Open another terminal window, navigate to the client/<language> directory and run the client (assuming the client has been compiled already).
+2a) For c, this is done with './client localhost' (where localhost is the webaddress of the server.)
+2b) For java, this is done with './run localhost'
+2c) For python, this is done with 'python main.py localhost'
+
+Step 2 will cause the client to respond with the message 'Creating game N' where N is an integer. 
+To connect the second player to the created game, run the language equivalant of './client localhost N'
+
+The server will generate a gamelog. To view the gamelog, run the visualizer and use the "File -> Open..." command to select the appropriate gamelog to view.
+
+Rinse and repeat until your AI dominiates everyone!
