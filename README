@@ -6,7 +6,14 @@ So, the first order of business is compiling all the pieces you will need:
 
 3) Navigate to the visualizer directory
 4a) If on windows, the visualizer has already been compiled. Do nothing.
-4b) If on linux, make sure qt4 development tools have been installed, then run qmake-qt4 to generate the makefile required. Then run 'make' to build the visualizer.
+4b) If on linux, make sure qt4 development tools have been installed, then:
+4b1) cd visualizer/parser/sexp
+4b2) make
+4b3) cd ..
+4b4) make
+4b5) cd ..
+4b6) qmake
+4b7) make
 
 Now that everything works, you can run a game!
 1) Navigate to the server directory and start a game by running 'python main.py'
