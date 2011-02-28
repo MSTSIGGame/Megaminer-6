@@ -1,0 +1,172 @@
+\hypertarget{classBaseAI}{
+\section{BaseAI Class Reference}
+\label{classBaseAI}\index{BaseAI@{BaseAI}}
+}
+
+
+A basic \hyperlink{classAI}{AI} interface.  
+
+
+
+
+{\ttfamily \#include $<$BaseAI.h$>$}
+
+Inheritance diagram for BaseAI:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classBaseAI}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBaseAI_a19ade7391bfe101884a35f48fb840199}{
+int \hyperlink{classBaseAI_a19ade7391bfe101884a35f48fb840199}{turnNumber} ()}
+\label{classBaseAI_a19ade7391bfe101884a35f48fb840199}
+
+\begin{DoxyCompactList}\small\item\em How many turns it has been since the beginning of the game. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a16aab1036653c8f8fb5370cf2f6a3e10}{
+int \hyperlink{classBaseAI_a16aab1036653c8f8fb5370cf2f6a3e10}{playerID} ()}
+\label{classBaseAI_a16aab1036653c8f8fb5370cf2f6a3e10}
+
+\begin{DoxyCompactList}\small\item\em Player Number; either 0 or 1. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a298c9ca7f754329796f45e38383c2c0a}{
+int \hyperlink{classBaseAI_a298c9ca7f754329796f45e38383c2c0a}{boardX} ()}
+\label{classBaseAI_a298c9ca7f754329796f45e38383c2c0a}
+
+\begin{DoxyCompactList}\small\item\em Maximum valid position in the X (right) direction. (0,0) is top left. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_aaf123aaebe77eeda93c3d78d5783f541}{
+int \hyperlink{classBaseAI_aaf123aaebe77eeda93c3d78d5783f541}{boardY} ()}
+\label{classBaseAI_aaf123aaebe77eeda93c3d78d5783f541}
+
+\begin{DoxyCompactList}\small\item\em Maximum valid position in the Y (down) direction. (0,0) is top left. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a50d3091db33b93c6f7c2d11dd64b4c7a}{
+int \hyperlink{classBaseAI_a50d3091db33b93c6f7c2d11dd64b4c7a}{gameNumber} ()}
+\label{classBaseAI_a50d3091db33b93c6f7c2d11dd64b4c7a}
+
+\begin{DoxyCompactList}\small\item\em What number game this is for the server. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a0c98c065f57b1519d6daf72ef1c71d71}{
+int \hyperlink{classBaseAI_a0c98c065f57b1519d6daf72ef1c71d71}{player0Time} ()}
+\label{classBaseAI_a0c98c065f57b1519d6daf72ef1c71d71}
+
+\begin{DoxyCompactList}\small\item\em Player 0's time remaining. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a5a96b2451bf0e2f6567e9e56d59cf7cb}{
+int \hyperlink{classBaseAI_a5a96b2451bf0e2f6567e9e56d59cf7cb}{player1Time} ()}
+\label{classBaseAI_a5a96b2451bf0e2f6567e9e56d59cf7cb}
+
+\begin{DoxyCompactList}\small\item\em Player 1's time remaining. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a92f2bd6e6d2acdab0a3d5749fc6d6ca8}{
+char $\ast$ \hyperlink{classBaseAI_a92f2bd6e6d2acdab0a3d5749fc6d6ca8}{player0Name} ()}
+\label{classBaseAI_a92f2bd6e6d2acdab0a3d5749fc6d6ca8}
+
+\begin{DoxyCompactList}\small\item\em Player 0's name. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a806ae8a1459d856a4b66e493a54a1b9a}{
+char $\ast$ \hyperlink{classBaseAI_a806ae8a1459d856a4b66e493a54a1b9a}{player1Name} ()}
+\label{classBaseAI_a806ae8a1459d856a4b66e493a54a1b9a}
+
+\begin{DoxyCompactList}\small\item\em Player 1's name. \item\end{DoxyCompactList}\item 
+\hypertarget{classBaseAI_a3f2806936e6e65d76218e04b057e05f4}{
+{\bfseries BaseAI} (\hyperlink{structConnection}{Connection} $\ast$c)}
+\label{classBaseAI_a3f2806936e6e65d76218e04b057e05f4}
+
+\item 
+virtual const char $\ast$ \hyperlink{classBaseAI_aef082fbf306fec04515ed5ed3b1ba582}{username} ()=0
+\item 
+virtual const char $\ast$ \hyperlink{classBaseAI_a9251e20447917cda64ad1487b903456f}{password} ()=0
+\item 
+virtual void \hyperlink{classBaseAI_a90ce8becd6f2e32c2cc32d41145e88df}{init} ()=0
+\item 
+virtual bool \hyperlink{classBaseAI_ad60148e7e9e450ce47432b07b4db1ed6}{run} ()=0
+\item 
+virtual void \hyperlink{classBaseAI_a60c8246a859ba2dba84b70239bc129bc}{end} ()=0
+\item 
+\hypertarget{classBaseAI_ac6303df0fece47e29b77dd0aa0aa4fe8}{
+bool {\bfseries startTurn} ()}
+\label{classBaseAI_ac6303df0fece47e29b77dd0aa0aa4fe8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBaseAI_a40585cc4b7c885978fffa3b1a23cb7ce}{
+\hyperlink{structConnection}{Connection} $\ast$ {\bfseries c}}
+\label{classBaseAI_a40585cc4b7c885978fffa3b1a23cb7ce}
+
+\item 
+\hypertarget{classBaseAI_acbde0c7c83f67a96473a5d0125c643b6}{
+std::vector$<$ \hyperlink{classBot}{Bot} $>$ {\bfseries bots}}
+\label{classBaseAI_acbde0c7c83f67a96473a5d0125c643b6}
+
+\item 
+\hypertarget{classBaseAI_ae3aef01a1a99c39581f1a56077cd9777}{
+std::vector$<$ \hyperlink{classFrame}{Frame} $>$ {\bfseries frames}}
+\label{classBaseAI_ae3aef01a1a99c39581f1a56077cd9777}
+
+\item 
+\hypertarget{classBaseAI_a329d43ebffdcbca7d18e3be12b0afdeb}{
+std::vector$<$ \hyperlink{classWall}{Wall} $>$ {\bfseries walls}}
+\label{classBaseAI_a329d43ebffdcbca7d18e3be12b0afdeb}
+
+\item 
+\hypertarget{classBaseAI_a27cf9fe6e3ec8ad2d3dd259b465af021}{
+std::vector$<$ \hyperlink{classType}{Type} $>$ {\bfseries types}}
+\label{classBaseAI_a27cf9fe6e3ec8ad2d3dd259b465af021}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A basic \hyperlink{classAI}{AI} interface. This class implements most the code an \hyperlink{classAI}{AI} would need to interface with the lower-\/level game code. AIs should extend this class to get a lot of boiler-\/plate code out of the way The provided \hyperlink{classAI}{AI} class does just that. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBaseAI_a60c8246a859ba2dba84b70239bc129bc}{
+\index{BaseAI@{BaseAI}!end@{end}}
+\index{end@{end}!BaseAI@{BaseAI}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}virtual void BaseAI::end ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classBaseAI_a60c8246a859ba2dba84b70239bc129bc}
+This function is called after the last turn. 
+
+Implemented in \hyperlink{classAI_a67b00a8dd5c6d73db2e4e2332826462e}{AI}.
+
+\hypertarget{classBaseAI_a90ce8becd6f2e32c2cc32d41145e88df}{
+\index{BaseAI@{BaseAI}!init@{init}}
+\index{init@{init}!BaseAI@{BaseAI}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void BaseAI::init ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classBaseAI_a90ce8becd6f2e32c2cc32d41145e88df}
+This function is run once, before your first turn. 
+
+Implemented in \hyperlink{classAI_a8c8e3a635791abaa61585357e6a25f63}{AI}.
+
+\hypertarget{classBaseAI_a9251e20447917cda64ad1487b903456f}{
+\index{BaseAI@{BaseAI}!password@{password}}
+\index{password@{password}!BaseAI@{BaseAI}}
+\subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ BaseAI::password ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classBaseAI_a9251e20447917cda64ad1487b903456f}
+Make this your password, which should be provided. 
+
+Implemented in \hyperlink{classAI_aa4e58e11bbbdb040e6b12f8706763a00}{AI}.
+
+\hypertarget{classBaseAI_ad60148e7e9e450ce47432b07b4db1ed6}{
+\index{BaseAI@{BaseAI}!run@{run}}
+\index{run@{run}!BaseAI@{BaseAI}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool BaseAI::run ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classBaseAI_ad60148e7e9e450ce47432b07b4db1ed6}
+This function is called each time it is your turn Return true to end your turn, return false to ask the server for updated information 
+
+Implemented in \hyperlink{classAI_a3c4746756b699cee5225597506521a39}{AI}.
+
+\hypertarget{classBaseAI_aef082fbf306fec04515ed5ed3b1ba582}{
+\index{BaseAI@{BaseAI}!username@{username}}
+\index{username@{username}!BaseAI@{BaseAI}}
+\subsubsection[{username}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ BaseAI::username ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classBaseAI_aef082fbf306fec04515ed5ed3b1ba582}
+Make this your username, which should be provided. 
+
+Implemented in \hyperlink{classAI_a529ac74a6f88a82abb1edd87847203e1}{AI}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BaseAI.h\item 
+BaseAI.cpp\end{DoxyCompactItemize}

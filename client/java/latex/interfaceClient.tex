@@ -1,0 +1,459 @@
+\hypertarget{interfaceClient}{
+\section{Client Interface Reference}
+\label{interfaceClient}\index{Client@{Client}}
+}
+
+
+Inherits com::sun::jna::Library.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interfaceClient_a6d25aca960b1e1a38ce203d6a969f9bc}{
+Pointer {\bfseries createConnection} ()}
+\label{interfaceClient_a6d25aca960b1e1a38ce203d6a969f9bc}
+
+\item 
+\hypertarget{interfaceClient_acfc9ada4dc1c3c147bd10d33a93cd5d5}{
+boolean {\bfseries serverConnect} (Pointer connection, String host, String port)}
+\label{interfaceClient_acfc9ada4dc1c3c147bd10d33a93cd5d5}
+
+\item 
+\hypertarget{interfaceClient_a889a9d7b3e68cb21ffcfaa7b2c19861b}{
+boolean {\bfseries serverLogin} (Pointer connection, String username, String password)}
+\label{interfaceClient_a889a9d7b3e68cb21ffcfaa7b2c19861b}
+
+\item 
+\hypertarget{interfaceClient_a4912adbddcbeff19d01f001ccd210375}{
+int {\bfseries createGame} (Pointer connection)}
+\label{interfaceClient_a4912adbddcbeff19d01f001ccd210375}
+
+\item 
+\hypertarget{interfaceClient_a8a9bed85e15f075bee07458a87645b6b}{
+int {\bfseries joinGame} (Pointer connection, int id)}
+\label{interfaceClient_a8a9bed85e15f075bee07458a87645b6b}
+
+\item 
+\hypertarget{interfaceClient_aff558de8ad20a23858ce3dc165fc4db7}{
+void {\bfseries endTurn} (Pointer connection)}
+\label{interfaceClient_aff558de8ad20a23858ce3dc165fc4db7}
+
+\item 
+\hypertarget{interfaceClient_a64de0e135006bec1aa4875ab0760f691}{
+void {\bfseries getStatus} (Pointer connection)}
+\label{interfaceClient_a64de0e135006bec1aa4875ab0760f691}
+
+\item 
+\hypertarget{interfaceClient_a88dd14b60667b07d577798e1c707c05f}{
+int {\bfseries networkLoop} (Pointer connection)}
+\label{interfaceClient_a88dd14b60667b07d577798e1c707c05f}
+
+\item 
+\hypertarget{interfaceClient_ae85be7504ef37da585be29e41cd86009}{
+int {\bfseries unitTalk} (Pointer object, String message)}
+\label{interfaceClient_ae85be7504ef37da585be29e41cd86009}
+
+\item 
+\hypertarget{interfaceClient_ab670d2ce8625e30392b054dabbeadf38}{
+int {\bfseries botTalk} (Pointer object, String message)}
+\label{interfaceClient_ab670d2ce8625e30392b054dabbeadf38}
+
+\item 
+\hypertarget{interfaceClient_a69c79c5cdeaff86718853db6c1e5409e}{
+int {\bfseries botMove} (Pointer object, String direction)}
+\label{interfaceClient_a69c79c5cdeaff86718853db6c1e5409e}
+
+\item 
+\hypertarget{interfaceClient_a2ab4c040a58d92c2ed58305a4deb9da8}{
+int {\bfseries botAttack} (Pointer object, Pointer target)}
+\label{interfaceClient_a2ab4c040a58d92c2ed58305a4deb9da8}
+
+\item 
+\hypertarget{interfaceClient_a9e0b35bda022503bc34b3eb40b23918b}{
+int {\bfseries botHeal} (Pointer object, Pointer target)}
+\label{interfaceClient_a9e0b35bda022503bc34b3eb40b23918b}
+
+\item 
+\hypertarget{interfaceClient_a4ec4c06e54844cbb6cb1a57ee5f10d26}{
+int {\bfseries botBuild} (Pointer object, Pointer type, int x, int y, int size)}
+\label{interfaceClient_a4ec4c06e54844cbb6cb1a57ee5f10d26}
+
+\item 
+\hypertarget{interfaceClient_aee1f13aeee6aada4c97e4cd0a913b67c}{
+int {\bfseries botCombine} (Pointer object, Pointer bot2, Pointer bot3, Pointer bot4)}
+\label{interfaceClient_aee1f13aeee6aada4c97e4cd0a913b67c}
+
+\item 
+\hypertarget{interfaceClient_ad70e5279bf0f55fdab08073d252dbd30}{
+int {\bfseries botSplit} (Pointer object)}
+\label{interfaceClient_ad70e5279bf0f55fdab08073d252dbd30}
+
+\item 
+\hypertarget{interfaceClient_a114c70ed3c06a2d6f487d010334bfee5}{
+int {\bfseries frameTalk} (Pointer object, String message)}
+\label{interfaceClient_a114c70ed3c06a2d6f487d010334bfee5}
+
+\item 
+\hypertarget{interfaceClient_a684ee609a689e1fb5b9e0404d56faeb6}{
+int {\bfseries wallTalk} (Pointer object, String message)}
+\label{interfaceClient_a684ee609a689e1fb5b9e0404d56faeb6}
+
+\item 
+\hypertarget{interfaceClient_a1c180b84ed7e74644ac62c1e069e26de}{
+int {\bfseries getTurnNumber} (Pointer connection)}
+\label{interfaceClient_a1c180b84ed7e74644ac62c1e069e26de}
+
+\item 
+\hypertarget{interfaceClient_a45ca933e037a2fa5ce4f97e67eb8b62f}{
+int {\bfseries getPlayerID} (Pointer connection)}
+\label{interfaceClient_a45ca933e037a2fa5ce4f97e67eb8b62f}
+
+\item 
+\hypertarget{interfaceClient_a56e0aaa3fd52c14ec34d8170115657fa}{
+int {\bfseries getBoardX} (Pointer connection)}
+\label{interfaceClient_a56e0aaa3fd52c14ec34d8170115657fa}
+
+\item 
+\hypertarget{interfaceClient_aa666bdd937baa207e339ba65bd126788}{
+int {\bfseries getBoardY} (Pointer connection)}
+\label{interfaceClient_aa666bdd937baa207e339ba65bd126788}
+
+\item 
+\hypertarget{interfaceClient_a172426923fb5bd5bdf79a3a3b6caf2e1}{
+int {\bfseries getGameNumber} (Pointer connection)}
+\label{interfaceClient_a172426923fb5bd5bdf79a3a3b6caf2e1}
+
+\item 
+\hypertarget{interfaceClient_a1f16fbd34fbdee312db08c06d996b98b}{
+int {\bfseries getPlayer0Time} (Pointer connection)}
+\label{interfaceClient_a1f16fbd34fbdee312db08c06d996b98b}
+
+\item 
+\hypertarget{interfaceClient_a2996321a7d00f9179b4bf2b5e7b15665}{
+int {\bfseries getPlayer1Time} (Pointer connection)}
+\label{interfaceClient_a2996321a7d00f9179b4bf2b5e7b15665}
+
+\item 
+\hypertarget{interfaceClient_a8f3720d04d10401b54abd7246cbb9ea3}{
+Pointer {\bfseries getBot} (Pointer connection, int num)}
+\label{interfaceClient_a8f3720d04d10401b54abd7246cbb9ea3}
+
+\item 
+\hypertarget{interfaceClient_a00a1eacedd62d95a9d1c48469e88ed98}{
+int {\bfseries getBotCount} (Pointer connection)}
+\label{interfaceClient_a00a1eacedd62d95a9d1c48469e88ed98}
+
+\item 
+\hypertarget{interfaceClient_abe68fcdd837fcab17168765b267bd7f8}{
+Pointer {\bfseries getFrame} (Pointer connection, int num)}
+\label{interfaceClient_abe68fcdd837fcab17168765b267bd7f8}
+
+\item 
+\hypertarget{interfaceClient_a50002df9725186999bf89c79db54c91c}{
+int {\bfseries getFrameCount} (Pointer connection)}
+\label{interfaceClient_a50002df9725186999bf89c79db54c91c}
+
+\item 
+\hypertarget{interfaceClient_aa609dacf31d684b222e66f9f80016ef2}{
+Pointer {\bfseries getWall} (Pointer connection, int num)}
+\label{interfaceClient_aa609dacf31d684b222e66f9f80016ef2}
+
+\item 
+\hypertarget{interfaceClient_a674a2852b8e9ee3df32985287e2911e3}{
+int {\bfseries getWallCount} (Pointer connection)}
+\label{interfaceClient_a674a2852b8e9ee3df32985287e2911e3}
+
+\item 
+\hypertarget{interfaceClient_a869c97852a3aaaa10e34140002a4c151}{
+Pointer {\bfseries getType} (Pointer connection, int num)}
+\label{interfaceClient_a869c97852a3aaaa10e34140002a4c151}
+
+\item 
+\hypertarget{interfaceClient_a1189d660e0047341a32a0f836de36cb6}{
+int {\bfseries getTypeCount} (Pointer connection)}
+\label{interfaceClient_a1189d660e0047341a32a0f836de36cb6}
+
+\item 
+\hypertarget{interfaceClient_a1ae1d0284973ceaa5115cd3addf7ce74}{
+int {\bfseries mappableGetId} (Pointer ptr)}
+\label{interfaceClient_a1ae1d0284973ceaa5115cd3addf7ce74}
+
+\item 
+\hypertarget{interfaceClient_a990a88afb4867000ea14e23ac1a3d958}{
+int {\bfseries mappableGetX} (Pointer ptr)}
+\label{interfaceClient_a990a88afb4867000ea14e23ac1a3d958}
+
+\item 
+\hypertarget{interfaceClient_a5cdc781b1df5fd37cd3420263b7455e8}{
+int {\bfseries mappableGetY} (Pointer ptr)}
+\label{interfaceClient_a5cdc781b1df5fd37cd3420263b7455e8}
+
+\item 
+\hypertarget{interfaceClient_afe84b5d936352863e9819c19d0615cdb}{
+int {\bfseries unitGetId} (Pointer ptr)}
+\label{interfaceClient_afe84b5d936352863e9819c19d0615cdb}
+
+\item 
+\hypertarget{interfaceClient_ad7cc6b3663226ce0536074f369bd83e1}{
+int {\bfseries unitGetX} (Pointer ptr)}
+\label{interfaceClient_ad7cc6b3663226ce0536074f369bd83e1}
+
+\item 
+\hypertarget{interfaceClient_ab3d72c3c1a64b14245d4efbb96713626}{
+int {\bfseries unitGetY} (Pointer ptr)}
+\label{interfaceClient_ab3d72c3c1a64b14245d4efbb96713626}
+
+\item 
+\hypertarget{interfaceClient_a98b685f94ca6511aa7f7ce2baef1a26d}{
+int {\bfseries unitGetOwner} (Pointer ptr)}
+\label{interfaceClient_a98b685f94ca6511aa7f7ce2baef1a26d}
+
+\item 
+\hypertarget{interfaceClient_a8914f4782dabc8a29510bbb64b5c4d71}{
+int {\bfseries unitGetHealth} (Pointer ptr)}
+\label{interfaceClient_a8914f4782dabc8a29510bbb64b5c4d71}
+
+\item 
+\hypertarget{interfaceClient_a559e648715bfa9f6868dba9c50e68300}{
+int {\bfseries unitGetMaxHealth} (Pointer ptr)}
+\label{interfaceClient_a559e648715bfa9f6868dba9c50e68300}
+
+\item 
+\hypertarget{interfaceClient_a7dac4c3822c4a98fbfee1d940374186e}{
+int {\bfseries unitGetSize} (Pointer ptr)}
+\label{interfaceClient_a7dac4c3822c4a98fbfee1d940374186e}
+
+\item 
+\hypertarget{interfaceClient_a78a6064a8107b683f92c7f4148795c41}{
+int {\bfseries botGetId} (Pointer ptr)}
+\label{interfaceClient_a78a6064a8107b683f92c7f4148795c41}
+
+\item 
+\hypertarget{interfaceClient_ac2a32283cf07a68a5236dc880d405456}{
+int {\bfseries botGetX} (Pointer ptr)}
+\label{interfaceClient_ac2a32283cf07a68a5236dc880d405456}
+
+\item 
+\hypertarget{interfaceClient_a1b01575d12884b925f8a9c29933c42e3}{
+int {\bfseries botGetY} (Pointer ptr)}
+\label{interfaceClient_a1b01575d12884b925f8a9c29933c42e3}
+
+\item 
+\hypertarget{interfaceClient_a749a02d7eea8b246df322dea573d419e}{
+int {\bfseries botGetOwner} (Pointer ptr)}
+\label{interfaceClient_a749a02d7eea8b246df322dea573d419e}
+
+\item 
+\hypertarget{interfaceClient_a188ac9f4c4e7808dd16e29454724aa79}{
+int {\bfseries botGetHealth} (Pointer ptr)}
+\label{interfaceClient_a188ac9f4c4e7808dd16e29454724aa79}
+
+\item 
+\hypertarget{interfaceClient_a5838f28f8c09b06a340f05ab913be7d8}{
+int {\bfseries botGetMaxHealth} (Pointer ptr)}
+\label{interfaceClient_a5838f28f8c09b06a340f05ab913be7d8}
+
+\item 
+\hypertarget{interfaceClient_a3b23a4822ef37a555fa361b52c6527ff}{
+int {\bfseries botGetSize} (Pointer ptr)}
+\label{interfaceClient_a3b23a4822ef37a555fa361b52c6527ff}
+
+\item 
+\hypertarget{interfaceClient_af3862719ac52124263d7b280036e462b}{
+int {\bfseries botGetActions} (Pointer ptr)}
+\label{interfaceClient_af3862719ac52124263d7b280036e462b}
+
+\item 
+\hypertarget{interfaceClient_acbbc4a91f36bac371074e24d5e4ed8e5}{
+int {\bfseries botGetSteps} (Pointer ptr)}
+\label{interfaceClient_acbbc4a91f36bac371074e24d5e4ed8e5}
+
+\item 
+\hypertarget{interfaceClient_a22bded870cb8d7fe7148ae67fcf76bb5}{
+int {\bfseries botGetDamage} (Pointer ptr)}
+\label{interfaceClient_a22bded870cb8d7fe7148ae67fcf76bb5}
+
+\item 
+\hypertarget{interfaceClient_ab8ee14f1b0e5b03019f9ff4a7a73c478}{
+int {\bfseries botGetRange} (Pointer ptr)}
+\label{interfaceClient_ab8ee14f1b0e5b03019f9ff4a7a73c478}
+
+\item 
+\hypertarget{interfaceClient_a19f9f8c845503bab7ca926081042dc45}{
+int {\bfseries botGetMovitude} (Pointer ptr)}
+\label{interfaceClient_a19f9f8c845503bab7ca926081042dc45}
+
+\item 
+\hypertarget{interfaceClient_a548f25678c8f41177ec93b071f91cb4c}{
+int {\bfseries botGetActitude} (Pointer ptr)}
+\label{interfaceClient_a548f25678c8f41177ec93b071f91cb4c}
+
+\item 
+\hypertarget{interfaceClient_a0003824b82dffa803044f2231efd1181}{
+int {\bfseries botGetBuildRate} (Pointer ptr)}
+\label{interfaceClient_a0003824b82dffa803044f2231efd1181}
+
+\item 
+\hypertarget{interfaceClient_a7bc6e9eb04a37ad59fa7d1a6103f1ce6}{
+int {\bfseries botGetPartOf} (Pointer ptr)}
+\label{interfaceClient_a7bc6e9eb04a37ad59fa7d1a6103f1ce6}
+
+\item 
+\hypertarget{interfaceClient_aaba63c758fc9f978da6a94ffb9ee9503}{
+int {\bfseries botGetBuilding} (Pointer ptr)}
+\label{interfaceClient_aaba63c758fc9f978da6a94ffb9ee9503}
+
+\item 
+\hypertarget{interfaceClient_a0c84753c59435529b396b4c98fadf061}{
+int {\bfseries botGetType} (Pointer ptr)}
+\label{interfaceClient_a0c84753c59435529b396b4c98fadf061}
+
+\item 
+\hypertarget{interfaceClient_ab66257ebcff8ae2e7ab2430b5658c924}{
+int {\bfseries frameGetId} (Pointer ptr)}
+\label{interfaceClient_ab66257ebcff8ae2e7ab2430b5658c924}
+
+\item 
+\hypertarget{interfaceClient_a252186ed4cc10f4b5b454a25e80b434c}{
+int {\bfseries frameGetX} (Pointer ptr)}
+\label{interfaceClient_a252186ed4cc10f4b5b454a25e80b434c}
+
+\item 
+\hypertarget{interfaceClient_a1ed27cb94e12e4ffe6feb61d882cc797}{
+int {\bfseries frameGetY} (Pointer ptr)}
+\label{interfaceClient_a1ed27cb94e12e4ffe6feb61d882cc797}
+
+\item 
+\hypertarget{interfaceClient_acea7d919211876275a0a4a6b3d0f48f3}{
+int {\bfseries frameGetOwner} (Pointer ptr)}
+\label{interfaceClient_acea7d919211876275a0a4a6b3d0f48f3}
+
+\item 
+\hypertarget{interfaceClient_ad12d4e32ddd9d30231662e0ad65c211c}{
+int {\bfseries frameGetHealth} (Pointer ptr)}
+\label{interfaceClient_ad12d4e32ddd9d30231662e0ad65c211c}
+
+\item 
+\hypertarget{interfaceClient_a81f933c54e095fb0a51f3d597f9bd707}{
+int {\bfseries frameGetMaxHealth} (Pointer ptr)}
+\label{interfaceClient_a81f933c54e095fb0a51f3d597f9bd707}
+
+\item 
+\hypertarget{interfaceClient_ac463b7d5596075cfa51829822a2e4cfe}{
+int {\bfseries frameGetSize} (Pointer ptr)}
+\label{interfaceClient_ac463b7d5596075cfa51829822a2e4cfe}
+
+\item 
+\hypertarget{interfaceClient_aa1955b6ccb6051b5a0a09379048a55da}{
+Pointer {\bfseries frameGetType} (Pointer ptr)}
+\label{interfaceClient_aa1955b6ccb6051b5a0a09379048a55da}
+
+\item 
+\hypertarget{interfaceClient_acd5872ceb93196d686e904cbdd0b86c8}{
+int {\bfseries frameGetCompletionTime} (Pointer ptr)}
+\label{interfaceClient_acd5872ceb93196d686e904cbdd0b86c8}
+
+\item 
+\hypertarget{interfaceClient_adc44cd9ed0cc462c6576ff35e406f23d}{
+int {\bfseries wallGetId} (Pointer ptr)}
+\label{interfaceClient_adc44cd9ed0cc462c6576ff35e406f23d}
+
+\item 
+\hypertarget{interfaceClient_a291c594db2be551af7ff999d2c111808}{
+int {\bfseries wallGetX} (Pointer ptr)}
+\label{interfaceClient_a291c594db2be551af7ff999d2c111808}
+
+\item 
+\hypertarget{interfaceClient_a988f1bfc1d29bcb75f321d2ff655515a}{
+int {\bfseries wallGetY} (Pointer ptr)}
+\label{interfaceClient_a988f1bfc1d29bcb75f321d2ff655515a}
+
+\item 
+\hypertarget{interfaceClient_a2157143a6e00bb5380b4dc725b8a25b6}{
+int {\bfseries wallGetOwner} (Pointer ptr)}
+\label{interfaceClient_a2157143a6e00bb5380b4dc725b8a25b6}
+
+\item 
+\hypertarget{interfaceClient_adff5f494aff7eb9dfa1b7f46aff32f7e}{
+int {\bfseries wallGetHealth} (Pointer ptr)}
+\label{interfaceClient_adff5f494aff7eb9dfa1b7f46aff32f7e}
+
+\item 
+\hypertarget{interfaceClient_ad2a41f5adf7c84c7249ed3c91f30e934}{
+int {\bfseries wallGetMaxHealth} (Pointer ptr)}
+\label{interfaceClient_ad2a41f5adf7c84c7249ed3c91f30e934}
+
+\item 
+\hypertarget{interfaceClient_a6ff19d19e3322c14fd1d26132cc25968}{
+int {\bfseries wallGetSize} (Pointer ptr)}
+\label{interfaceClient_a6ff19d19e3322c14fd1d26132cc25968}
+
+\item 
+\hypertarget{interfaceClient_a03a24153542794f825be2d346ceb107f}{
+int {\bfseries typeGetId} (Pointer ptr)}
+\label{interfaceClient_a03a24153542794f825be2d346ceb107f}
+
+\item 
+\hypertarget{interfaceClient_a8eba9b0b33e16b48ced3c801d370a104}{
+String {\bfseries typeGetName} (Pointer ptr)}
+\label{interfaceClient_a8eba9b0b33e16b48ced3c801d370a104}
+
+\item 
+\hypertarget{interfaceClient_afcb674ea840688d82d06e975a5c53dc7}{
+int {\bfseries typeGetMaxHealth} (Pointer ptr)}
+\label{interfaceClient_afcb674ea840688d82d06e975a5c53dc7}
+
+\item 
+\hypertarget{interfaceClient_a4ebfaf936c1bc5d2a3d6c9bda56e1e7e}{
+int {\bfseries typeGetDamage} (Pointer ptr)}
+\label{interfaceClient_a4ebfaf936c1bc5d2a3d6c9bda56e1e7e}
+
+\item 
+\hypertarget{interfaceClient_ab23e81df5c25036788742bfd893b5dbc}{
+int {\bfseries typeGetRange} (Pointer ptr)}
+\label{interfaceClient_ab23e81df5c25036788742bfd893b5dbc}
+
+\item 
+\hypertarget{interfaceClient_a6ed2abcab1f0172224e52481a9b1cf3a}{
+int {\bfseries typeGetMovitude} (Pointer ptr)}
+\label{interfaceClient_a6ed2abcab1f0172224e52481a9b1cf3a}
+
+\item 
+\hypertarget{interfaceClient_ab855ecfea1672d84541bb1505b798630}{
+int {\bfseries typeGetActitude} (Pointer ptr)}
+\label{interfaceClient_ab855ecfea1672d84541bb1505b798630}
+
+\item 
+\hypertarget{interfaceClient_a98d52a61c30e1bf7232ef43a916c106d}{
+int {\bfseries typeGetBuildRate} (Pointer ptr)}
+\label{interfaceClient_a98d52a61c30e1bf7232ef43a916c106d}
+
+\item 
+\hypertarget{interfaceClient_ad9a6ff3f17ff20964b738ee75fca73a1}{
+int {\bfseries botMaxActions} (Pointer object)}
+\label{interfaceClient_ad9a6ff3f17ff20964b738ee75fca73a1}
+
+\item 
+\hypertarget{interfaceClient_aa54b6063b7c49db8bfeb3fe674a33d19}{
+int {\bfseries botMaxSteps} (Pointer object)}
+\label{interfaceClient_aa54b6063b7c49db8bfeb3fe674a33d19}
+
+\item 
+\hypertarget{interfaceClient_a422fc288bd2857ccceb6dcf8ef21aae3}{
+int {\bfseries distance} (int fromX, int fromY, int fromSize, int toX, int toY, int toSize)}
+\label{interfaceClient_a422fc288bd2857ccceb6dcf8ef21aae3}
+
+\end{DoxyCompactItemize}
+\subsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interfaceClient_a0ae9e0dc323a16f1240f314e379de21e}{
+\hyperlink{interfaceClient}{Client} {\bfseries INSTANCE} = (\hyperlink{interfaceClient}{Client})Native.loadLibrary(\char`\"{}client\char`\"{}, Client.class)}
+\label{interfaceClient_a0ae9e0dc323a16f1240f314e379de21e}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this interface was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Client.java\end{DoxyCompactItemize}

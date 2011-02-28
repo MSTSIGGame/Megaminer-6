@@ -27,4 +27,4 @@ To connect the second player to the created game, run the language equivalant of
 
 The server will generate a gamelog. To view the gamelog, run the visualizer and use the "File -> Open..." command to select the appropriate gamelog to view.
 
-Rinse and repeat until your AI dominiates everyone!
+Rinse and repeat until your AI dominiates everyone! API documentation is in the respective client folders (in the html and LaTex directories)

@@ -1,0 +1,181 @@
+\hypertarget{classBot}{
+\section{Bot Class Reference}
+\label{classBot}\index{Bot@{Bot}}
+}
+
+
+The bot class.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBot_ad76750108be60ff079cad6ec1e6e9c4c}{
+{\bfseries Bot} (Pointer p)}
+\label{classBot_ad76750108be60ff079cad6ec1e6e9c4c}
+
+\item 
+\hypertarget{classBot_a908c7223a746a6a73860eebbca51d857}{
+int \hyperlink{classBot_a908c7223a746a6a73860eebbca51d857}{getId} ()}
+\label{classBot_a908c7223a746a6a73860eebbca51d857}
+
+\begin{DoxyCompactList}\small\item\em Unique Identifier. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a8ab5c2dbee60a4e944c19f5937a4f0bc}{
+int \hyperlink{classBot_a8ab5c2dbee60a4e944c19f5937a4f0bc}{getX} ()}
+\label{classBot_a8ab5c2dbee60a4e944c19f5937a4f0bc}
+
+\begin{DoxyCompactList}\small\item\em The X position of the top left corner of this object. X is horizontal. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a7b2cd8ef8e2983ad804938dd5922892f}{
+int \hyperlink{classBot_a7b2cd8ef8e2983ad804938dd5922892f}{getY} ()}
+\label{classBot_a7b2cd8ef8e2983ad804938dd5922892f}
+
+\begin{DoxyCompactList}\small\item\em The Y position of the top left corner of this object. Y is vertical. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a1c00ffd59e5a6c5ffdbb612170fb9c3c}{
+int \hyperlink{classBot_a1c00ffd59e5a6c5ffdbb612170fb9c3c}{getOwner} ()}
+\label{classBot_a1c00ffd59e5a6c5ffdbb612170fb9c3c}
+
+\begin{DoxyCompactList}\small\item\em The owning player. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_aac0c29873cecd6841910a49e1df18fd9}{
+int \hyperlink{classBot_aac0c29873cecd6841910a49e1df18fd9}{getHealth} ()}
+\label{classBot_aac0c29873cecd6841910a49e1df18fd9}
+
+\begin{DoxyCompactList}\small\item\em How much health this unit currently has. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a3f4f393140205b8a1685ffbc686e10d8}{
+int \hyperlink{classBot_a3f4f393140205b8a1685ffbc686e10d8}{getMaxHealth} ()}
+\label{classBot_a3f4f393140205b8a1685ffbc686e10d8}
+
+\begin{DoxyCompactList}\small\item\em The maximum amount of health this unit can ever have. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a6ee91c0312cd5350521245c77b6b05da}{
+int \hyperlink{classBot_a6ee91c0312cd5350521245c77b6b05da}{getActions} ()}
+\label{classBot_a6ee91c0312cd5350521245c77b6b05da}
+
+\begin{DoxyCompactList}\small\item\em How many actions this bot can still perform. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_aa589a8a7e52bbca650448c158096e8cc}{
+int \hyperlink{classBot_aa589a8a7e52bbca650448c158096e8cc}{getSteps} ()}
+\label{classBot_aa589a8a7e52bbca650448c158096e8cc}
+
+\begin{DoxyCompactList}\small\item\em How many steps this bot can still take. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a8441680a647000cd5646fb4b8bb0f9eb}{
+int \hyperlink{classBot_a8441680a647000cd5646fb4b8bb0f9eb}{getSize} ()}
+\label{classBot_a8441680a647000cd5646fb4b8bb0f9eb}
+
+\begin{DoxyCompactList}\small\item\em The length of one side of this robot, such that size$^\wedge$2 = number of bots combined into this bot. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_aee79f194c39cf4b2644bfe4bb9935fb6}{
+int \hyperlink{classBot_aee79f194c39cf4b2644bfe4bb9935fb6}{getDamage} ()}
+\label{classBot_aee79f194c39cf4b2644bfe4bb9935fb6}
+
+\begin{DoxyCompactList}\small\item\em The amount of damage this robot does when attacking. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a7234ac107af9b2c50f6b286efe9fa3b5}{
+int \hyperlink{classBot_a7234ac107af9b2c50f6b286efe9fa3b5}{getRange} ()}
+\label{classBot_a7234ac107af9b2c50f6b286efe9fa3b5}
+
+\begin{DoxyCompactList}\small\item\em How far this robot can attack or heal from its edge. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a6a9a3c01bb0ac1bf145da57fd8aa403f}{
+int \hyperlink{classBot_a6a9a3c01bb0ac1bf145da57fd8aa403f}{getMovitude} ()}
+\label{classBot_a6a9a3c01bb0ac1bf145da57fd8aa403f}
+
+\begin{DoxyCompactList}\small\item\em This value divided by the number of bots = maxSteps for this robot. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_aa6917c2c7957ee5faf6f751a77ce0761}{
+int \hyperlink{classBot_aa6917c2c7957ee5faf6f751a77ce0761}{getActitude} ()}
+\label{classBot_aa6917c2c7957ee5faf6f751a77ce0761}
+
+\begin{DoxyCompactList}\small\item\em This value divided by the number of bots = maxActions for this robot. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_ab1e65bdf5d66c72a2fd3e786737acf88}{
+int \hyperlink{classBot_ab1e65bdf5d66c72a2fd3e786737acf88}{getBuildRate} ()}
+\label{classBot_ab1e65bdf5d66c72a2fd3e786737acf88}
+
+\begin{DoxyCompactList}\small\item\em This value is used to determine how many turns it takes to build a robot and how much this robot heals for. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a94c11e4b01fab1e525e349ee6e005086}{
+int \hyperlink{classBot_a94c11e4b01fab1e525e349ee6e005086}{getPartOf} ()}
+\label{classBot_a94c11e4b01fab1e525e349ee6e005086}
+
+\begin{DoxyCompactList}\small\item\em ID of the robot this robot is apart of, 0 if not in a robot. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_aafce1528acee7093c42c5221086c0ce4}{
+int \hyperlink{classBot_aafce1528acee7093c42c5221086c0ce4}{getBuilding} ()}
+\label{classBot_aafce1528acee7093c42c5221086c0ce4}
+
+\begin{DoxyCompactList}\small\item\em ID of the robot this robot is building, 0 if not building. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a2571c8d19c65942ccc7eeebe8b056b9d}{
+int \hyperlink{classBot_a2571c8d19c65942ccc7eeebe8b056b9d}{getType} ()}
+\label{classBot_a2571c8d19c65942ccc7eeebe8b056b9d}
+
+\begin{DoxyCompactList}\small\item\em ID of the type this robot is, 0 if a combination. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBot_a1e1c0cd44d4bbba5b8111e5ae4fb07fa}{
+boolean {\bfseries validify} ()}
+\label{classBot_a1e1c0cd44d4bbba5b8111e5ae4fb07fa}
+
+\item 
+\hypertarget{classBot_a6f8c1424e8973080a7d36a274c18ac98}{
+int \hyperlink{classBot_a6f8c1424e8973080a7d36a274c18ac98}{talk} (String message)}
+\label{classBot_a6f8c1424e8973080a7d36a274c18ac98}
+
+\begin{DoxyCompactList}\small\item\em Sends a message to be visualized when this unit is selected. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a2085552541da326273e8bf793f14f4ed}{
+int \hyperlink{classBot_a2085552541da326273e8bf793f14f4ed}{move} (String direction)}
+\label{classBot_a2085552541da326273e8bf793f14f4ed}
+
+\begin{DoxyCompactList}\small\item\em Move in the indicated direction (U, D, L, or R). U is y=y-\/1, L=x=x-\/1, such that the top left corner is (0,0). Requires the calling robot to have a step. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a98de8f304ec856d6425dee2cf410e150}{
+int \hyperlink{classBot_a98de8f304ec856d6425dee2cf410e150}{attack} (\hyperlink{classUnit}{Unit} target)}
+\label{classBot_a98de8f304ec856d6425dee2cf410e150}
+
+\begin{DoxyCompactList}\small\item\em Attack the specified unit. Requires the calling robot to have an action and for the target to be in range. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a941642a4058280482a3ccadf140704e8}{
+int \hyperlink{classBot_a941642a4058280482a3ccadf140704e8}{heal} (\hyperlink{classBot}{Bot} target)}
+\label{classBot_a941642a4058280482a3ccadf140704e8}
+
+\begin{DoxyCompactList}\small\item\em Heals the indicated bot. Requires the calling robot to have an action and for the target to be in range. Heals for target.maxHealth $\ast$ self.buildRate / (4 $\ast$ target.size$^\wedge$2). \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_ae4cd747dd0838ba6185ff826d47ea80e}{
+int \hyperlink{classBot_ae4cd747dd0838ba6185ff826d47ea80e}{build} (\hyperlink{classType}{Type} type, int x, int y, int size)}
+\label{classBot_ae4cd747dd0838ba6185ff826d47ea80e}
+
+\begin{DoxyCompactList}\small\item\em Begins building a new robot. While building, the new robot will be a frame. Requires the calling robot to have an action. X and Y must cause the new robot to be adjacent. Size must be less than or equal to the calling robots size. Completes in 8 $\ast$ size$^\wedge$2 / self.buildRate turns. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a8cf1c8d53d8825c03c296fb33273627c}{
+int \hyperlink{classBot_a8cf1c8d53d8825c03c296fb33273627c}{combine} (\hyperlink{classBot}{Bot} bot2, \hyperlink{classBot}{Bot} bot3, \hyperlink{classBot}{Bot} bot4)}
+\label{classBot_a8cf1c8d53d8825c03c296fb33273627c}
+
+\begin{DoxyCompactList}\small\item\em Combines four robots into one. Requires all robots to have an action, be of the same size, and be arranged in a square. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_ad710db985160136aa8e3c624b26afc4e}{
+int \hyperlink{classBot_ad710db985160136aa8e3c624b26afc4e}{split} ()}
+\label{classBot_ad710db985160136aa8e3c624b26afc4e}
+
+\begin{DoxyCompactList}\small\item\em Splits a compound bot into the 4 robots that combined to make it. Requires the calling robot to have an action. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_a401b1a46fc56304e2f6c02c4e4eb4f8d}{
+int \hyperlink{classBot_a401b1a46fc56304e2f6c02c4e4eb4f8d}{getMaxActions} ()}
+\label{classBot_a401b1a46fc56304e2f6c02c4e4eb4f8d}
+
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of actions this robot can take per turn. \item\end{DoxyCompactList}\item 
+\hypertarget{classBot_aa3e61d73d90ec47b879cd08a3efdf475}{
+int \hyperlink{classBot_aa3e61d73d90ec47b879cd08a3efdf475}{getMaxSteps} ()}
+\label{classBot_aa3e61d73d90ec47b879cd08a3efdf475}
+
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of steps this robot can take per turn. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBot_a68b1370c5ecf53f9187780a3dccccc77}{
+Pointer {\bfseries ptr}}
+\label{classBot_a68b1370c5ecf53f9187780a3dccccc77}
+
+\item 
+\hypertarget{classBot_a7d665acd119cd73f9c9ddca6101b117b}{
+int {\bfseries ID}}
+\label{classBot_a7d665acd119cd73f9c9ddca6101b117b}
+
+\item 
+\hypertarget{classBot_a0fc227ce34de1e791bb5331faef6442f}{
+int {\bfseries iteration}}
+\label{classBot_a0fc227ce34de1e791bb5331faef6442f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The bot class. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Bot.java\end{DoxyCompactItemize}

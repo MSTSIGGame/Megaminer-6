@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <title>Megaminer 6: Modular</title>
+  </head>
+  <body>
+There are six types of bots, A through F. All can be mixed in any combination to form a larger bot. <br/>
+<table border="1">
+  <tr>
+    <td><img src="pics/Action 2 512.png" width="100" height="100"/></td>
+    <td><img src="pics/Action 1 512.png" width="100" height="100"/></td>
+    <td>Action -- These bots, when combined, give the combined bot a bonus to the number of actions it can perform in a turn.</td>
+  </tr>
+  <tr>
+    <td><img src="pics/Builder 2 512.png" width="100" height="100"/></td>
+    <td><img src="pics/Builder 1 512.png" width="100" height="100"/></td>
+    <td>Builder -- These bots are able to build other bots of the same size or smaller, and can heal other bots.</td>
+  </tr>
+  <tr>
+    <td><img src="pics/Cannon 2 512.png" width="100" height="100"/></td>
+    <td><img src="pics/Cannon 1 512.png" width="100" height="100"/></td>
+    <td>Cannon -- These bots have a ranged attack.</td>
+  </tr>
+  <tr>
+    <td><img src="pics/Damage 2 512.png" width="100" height="100"/></td>
+    <td><img src="pics/Damage 1 512.png" width="100" height="100"/></td>
+    <td>Damage -- These bots do more damage on attack than default.</td>
+  </tr>
+  <tr>
+    <td><img src="pics/Engine 2 512.png" width="100" height="100"/></td>
+    <td><img src="pics/Engine 1 512.png" width="100" height="100"/></td>
+    <td>Engine -- These bots can move farther per turn.</td>
+  </tr>
+  <tr>
+    <td><img src="pics/Force 2 512.png" width="100" height="100"/></td>
+    <td><img src="pics/Force 1 512.png" width="100" height="100"/></td>
+    <td>Force Field -- These bots have more health than default.</td>
+  </tr>
+</table>
+
+These units have the following stats:
+<p/>
+[action]<br/>
+maxHealth = 16<br/>
+damage = 1<br/>
+range = 0<br/>
+movitude = 1<br/>
+actitude = 4<br/>
+buildRate = 0<br/>
+<p/>
+[builder]<br/>
+maxHealth = 8<br/>
+damage = 0<br/>
+range = 0<br/>
+movitude = 1<br/>
+actitude = 1<br/>
+buildRate = 1<br/>
+<p/>
+[cannon]<br/>
+maxHealth = 24<br/>
+damage = 4<br/>
+range = 1<br/>
+movitude = 1<br/>
+actitude = 1<br/>
+buildRate = 0<br/>
+<p/>
+[damage]<br/>
+maxHealth = 24<br/>
+damage = 10<br/>
+range = 0<br/>
+movitude = 1<br/>
+actitude = 1<br/>
+buildRate = 0<br/>
+<p/>
+[engine]<br/>
+maxHealth = 16<br/>
+damage = 4<br/>
+range = 0<br/>
+movitude = 4<br/>
+actitude = 1<br/>
+buildRate = 0<br/>
+<p/>
+[force]<br/>
+maxHealth = 40<br/>
+damage = 4<br/>
+range = 0<br/>
+movitude = 1<br/>
+actitude = 1<br/>
+buildRate = 0<br/>
+<p/>
+
+
+
+<p/>
+Actions:<br/>
+Move: <br/>
+Bots can move only in the cardinal directions "udlr" (Up, Down, Left, Right). <br/>
+The default maximum move rate is one unit per turn, though bots with engines can move faster.  <br/>
+If bots collide with anything, friend, foe, or wall, all objects involved take damage, which is distributed across all bots in the collision.<br/>
+Function call: int self.move(std::string direction)<br/>
+Requirements:<br/>
+(1) Direction must be a string with the inital character being u, d, l, or r.<br/>
+(2) Bot must have at least one step left<br/>
+(3) Bot must not be stepping off the map<br/>
+Calculations:<br/>
+Damage caused for each individual object is (min(victimHealth, self.size^2) * 4), where victimHealth is the combined health of everything the bot is running into.<br/>
+Maximum Move Distance is determined by Movitude/Size^2 (rounds down) where Size is the length of a side of a bot, so Size^2 is the number of 1x1 bots making up the bot <br/> 
+<p/>
+Attack:<br/>
+Some bots can attack.<br/>
+Function call: int self.attack (Unit &target)<br/>
+Requirements:<br/>
+(1) Bot must be able to do damage.<br/>
+(2) Target must be in range (not necessarily adjacent, as cannon bots and their derivitives have range.)<br/>
+(3) Target cannot be a sub-bot of a combined bot (must attack the entire bot, not cherry pick components to plink.)<br/>
+(4) Target must have at least one free action.<br/>
+Calculations:<br/>
+Target takes damage equal to that specified by self.damage()<br/>
+The bot's actions for the turn are decrimented by 1 <br/>
+The number of actions a bot has is determined by Actitude/Size^2 (rounds down) where Size is the length of a side of a bot, so Size^2 is the number of 1x1 bots making up the bot <br/>
+<p/>
+Build:<br/>
+Builders are the only bot that can build. When they build, they produce a frame that occupies the space that the finished bot will occupy. They can build any homogenous bot their size or smaller. They must build the new bot in a cardinal direction adjacent to themselves. They must have at least one action to be able to build, and they must build inside the map.<br/>
+Function call: int build(Type &type, int x, int y, int size)<br/>
+Requirements:<br/>
+(1) The builder must be a build bot<br/>
+(2) The builder must have at least one free action point<br/>
+(3) The built target must be on the game map<br/>
+(4) Size of build target must be less than or equal to the size of the builder<br/>
+(5) Size of build target must be a power of two<br/>
+(6) The build target must be adjacent to the builder<br/>
+(7) The build target area must not be occupied.<br/>
+Calculations:<br/>
+It takes (8 * size**2 / self.buildRate) turns to build an object.<br/>
+The resulting health of the object is min(type.maxHealth * self.buildRate / 8, type.maxHealth * size**2)<br/>
+<p/>
+Heal: <br/>
+Bots are healed at twice the rate it takes to build them.<br/> 
+Function call: int heal(Bot &target)<br/>
+Requirements:<br/>
+(1) The healer must be a build bot<br/>
+(2) The healer must be adjacent to the target<br/>
+(3) The target must be friendly (not the enemy)<br/>
+(4) The target cannot be at full health<br/>
+(5) The healer must have at least one free action point.<br/>
+Calculations<br/>
+Bots are healed at the twice the rate of building the same bot, or (target._takeDamage(-target.maxHealth * self.buildRate / (4 * target.size**2)))<br/>
+The bot's actions for the turn are decrimented by 1 <br/>
+The number of actions a bot has is determined by Actitude/Size^2 (rounds down) where Size is the length of a side of a bot, so Size^2 is the number of 1x1 bots making up the bot <br/>
+<p/>
+Combine: <br/>
+Four bots already arranged in a square can be combined into a larger bot.<br/> 
+Function call: int combine(Bot &bot2, Bot &bot3, Bot &bot4)<br/>
+Requirements:<br/>
+(1) All bots to be combined must have at least one free action point.<br/>
+(2) All bots to be combined must be the same size<br/>
+(3) All bots must be adjacent to each other in a square formation.<br/>
+The resulting bot has the sum of the stats of its component bots <br/>
+<p/>
+Split:<br/>
+Combined bots can split back up into their component parts.<br/>
+Function call: int split()<br/>
+Requirements:<br/>
+(1) Bot must have at least one action available.<br/>
+(2) Bot to be split must be a combined bot.<br/>
+Calculations:<br/>
+The resulting bots are assigned their new health based on the percentage of health the combined bot had. (i.health = int(i.maxHealth * (float(self.health) / self.maxHealth)))<br/>
+<p/>
+Talk: Bots can talk. Talking causes the input string to show up in the visualizer. This can be useful for debug statements. <br/>
+<p/>
+Map dimensions and origin: The map is 20 units tall by 40 units wide. Note that (0,0) is the top-left space the map, and thus (0,19) is the bottom-left space, (39, 0) is the top-right space, and (39, 19) is the bottom-right space. <br/>
+<p/>
+Player 0 starts with builder bots at (3,9) and (3,10), while Player 1 starts with builder bots at (36,9) and (36,10).<p/>
+Walls are procedurally generated and then mirrored, so the map is initially symmetric.  There will never be any walls placed within X +/- 1 and Y +/- 1 of any starting bot.<p/>
+A brief discussion of the workflow:<br/>
+Team workflow:<br/>
+The AI.(language) file is edited by your team. <br/>
+Your team then runs 'make' in your client directory.<br/>
+Make puts together a client that plays the game. <br/>
+Connect both clients to the server with './run r03mwwcp2.device.mst.edu' and './run r03mwwcp2.device.mst.edu (gamenumber)'<br/>
+The server puts out a gamelog in the same directory.<br/>
+Finally, you run the visualizer, and use it to open the gamelog and view the results. <br/>
+<p/>
+Arena workflow:<br/>
+Once you think you have a working AI, you can push as many new revisions to the server as you like.<br/>
+To do so, your team runs 'make submit' and your client is pushed to the arena. (You are done at this point.)<br/>
+The arena server continuously farms out new games to a bank of client machines we have set up. <br/>
+They play the games and pass the results back to the arena server. <br/>
+The arena server then passes the gamelogs to the webserver, as well as randomly scheduling games to be shown on the projectors.<br/>
+  </body>
+</html>

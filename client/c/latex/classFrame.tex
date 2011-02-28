@@ -1,0 +1,94 @@
+\hypertarget{classFrame}{
+\section{Frame Class Reference}
+\label{classFrame}\index{Frame@{Frame}}
+}
+
+
+A baby robot.  
+
+
+
+
+{\ttfamily \#include $<$Frame.h$>$}
+
+Inheritance diagram for Frame:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classFrame}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFrame_a769fdb84cf592ffcd4237c19ceef6d82}{
+{\bfseries Frame} (\hyperlink{struct__Frame}{\_\-Frame} $\ast$ptr=NULL)}
+\label{classFrame_a769fdb84cf592ffcd4237c19ceef6d82}
+
+\item 
+\hypertarget{classFrame_a911baca571e6b2797abdf8571c052a33}{
+int \hyperlink{classFrame_a911baca571e6b2797abdf8571c052a33}{id} ()}
+\label{classFrame_a911baca571e6b2797abdf8571c052a33}
+
+\begin{DoxyCompactList}\small\item\em Unique Identifier. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_ae79da2230ddbd26db054c1813c90001d}{
+int \hyperlink{classFrame_ae79da2230ddbd26db054c1813c90001d}{x} ()}
+\label{classFrame_ae79da2230ddbd26db054c1813c90001d}
+
+\begin{DoxyCompactList}\small\item\em The X position of the top left corner of this object. X is horizontal. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_a68e7df1ea11dc4f395af738236497703}{
+int \hyperlink{classFrame_a68e7df1ea11dc4f395af738236497703}{y} ()}
+\label{classFrame_a68e7df1ea11dc4f395af738236497703}
+
+\begin{DoxyCompactList}\small\item\em The Y position of the top left corner of this object. Y is vertical. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_a7d59291410b16536acb04d17eb2c7f78}{
+int \hyperlink{classFrame_a7d59291410b16536acb04d17eb2c7f78}{owner} ()}
+\label{classFrame_a7d59291410b16536acb04d17eb2c7f78}
+
+\begin{DoxyCompactList}\small\item\em The owning player. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_aaf3de4533499648a8d698289969259a2}{
+int \hyperlink{classFrame_aaf3de4533499648a8d698289969259a2}{health} ()}
+\label{classFrame_aaf3de4533499648a8d698289969259a2}
+
+\begin{DoxyCompactList}\small\item\em How much health this unit currently has. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_a289d21264e331e9f1659081ae2e3dc99}{
+int \hyperlink{classFrame_a289d21264e331e9f1659081ae2e3dc99}{maxHealth} ()}
+\label{classFrame_a289d21264e331e9f1659081ae2e3dc99}
+
+\begin{DoxyCompactList}\small\item\em The maximum amount of health this unit can ever have. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_ad6cb00942444e8af07398c6b9e2dd6ab}{
+\hyperlink{struct__Type}{\_\-Type} $\ast$ \hyperlink{classFrame_ad6cb00942444e8af07398c6b9e2dd6ab}{type} ()}
+\label{classFrame_ad6cb00942444e8af07398c6b9e2dd6ab}
+
+\begin{DoxyCompactList}\small\item\em What type this robot will be. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_a75d57082f9ac6da59af47f80167aba16}{
+int \hyperlink{classFrame_a75d57082f9ac6da59af47f80167aba16}{size} ()}
+\label{classFrame_a75d57082f9ac6da59af47f80167aba16}
+
+\begin{DoxyCompactList}\small\item\em The length of one side of this robot, such that size$^\wedge$2 = number of bots combined into this bot. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_aaaf493c7edf8a7b4a65a6dadc61093c5}{
+int \hyperlink{classFrame_aaaf493c7edf8a7b4a65a6dadc61093c5}{completionTime} ()}
+\label{classFrame_aaaf493c7edf8a7b4a65a6dadc61093c5}
+
+\begin{DoxyCompactList}\small\item\em How many of your turns until this frame becomes a robot. \item\end{DoxyCompactList}\item 
+\hypertarget{classFrame_ac1465ce1473dab465d32971b9196978f}{
+int \hyperlink{classFrame_ac1465ce1473dab465d32971b9196978f}{talk} (std::string message)}
+\label{classFrame_ac1465ce1473dab465d32971b9196978f}
+
+\begin{DoxyCompactList}\small\item\em Sends a message to be visualized when this unit is selected. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFrame_aa5868d66c4a975c7393691c0647aedd4}{
+std::ostream \& {\bfseries operator$<$$<$} (std::ostream \&stream, \hyperlink{classFrame}{Frame} ob)}
+\label{classFrame_aa5868d66c4a975c7393691c0647aedd4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A baby robot. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Frame.h\item 
+Frame.cpp\end{DoxyCompactItemize}

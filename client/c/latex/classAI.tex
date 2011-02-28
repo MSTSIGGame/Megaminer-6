@@ -1,0 +1,114 @@
+\hypertarget{classAI}{
+\section{AI Class Reference}
+\label{classAI}\index{AI@{AI}}
+}
+
+
+The class implementing gameplay logic.  
+
+
+
+
+{\ttfamily \#include $<$AI.h$>$}
+
+Inheritance diagram for AI:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classAI}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAI_ae37d6a193873f7e35deb19671bf45a14}{
+{\bfseries AI} (\hyperlink{structConnection}{Connection} $\ast$c)}
+\label{classAI_ae37d6a193873f7e35deb19671bf45a14}
+
+\item 
+virtual const char $\ast$ \hyperlink{classAI_a529ac74a6f88a82abb1edd87847203e1}{username} ()
+\item 
+virtual const char $\ast$ \hyperlink{classAI_aa4e58e11bbbdb040e6b12f8706763a00}{password} ()
+\item 
+virtual void \hyperlink{classAI_a8c8e3a635791abaa61585357e6a25f63}{init} ()
+\item 
+virtual bool \hyperlink{classAI_a3c4746756b699cee5225597506521a39}{run} ()
+\item 
+virtual void \hyperlink{classAI_a67b00a8dd5c6d73db2e4e2332826462e}{end} ()
+\item 
+\hypertarget{classAI_ac4f1565ad6e33d6999663baf20c11861}{
+void {\bfseries unload} (\hyperlink{classBot}{Bot} \&actor, \hyperlink{classUnit}{Unit} \&target)}
+\label{classAI_ac4f1565ad6e33d6999663baf20c11861}
+
+\item 
+\hypertarget{classAI_a50bee5fc94b1d2b12fe2d960f3ed074b}{
+bool {\bfseries inRange} (\hyperlink{classBot}{Bot} \&actor, \hyperlink{classUnit}{Unit} \&target)}
+\label{classAI_a50bee5fc94b1d2b12fe2d960f3ed074b}
+
+\item 
+\hypertarget{classAI_ac8cee3de4faa8cb0b446a8494752f4ac}{
+\hyperlink{classUnit}{Unit} $\ast$ {\bfseries findNearestTarget} (\hyperlink{classBot}{Bot} \&actor)}
+\label{classAI_ac8cee3de4faa8cb0b446a8494752f4ac}
+
+\item 
+\hypertarget{classAI_a0162d0d17ab9dc076785b14de0bc8c37}{
+void {\bfseries moveTowardsTarget} (\hyperlink{classBot}{Bot} \&actor, \hyperlink{classUnit}{Unit} \&target)}
+\label{classAI_a0162d0d17ab9dc076785b14de0bc8c37}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class implementing gameplay logic. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAI_a67b00a8dd5c6d73db2e4e2332826462e}{
+\index{AI@{AI}!end@{end}}
+\index{end@{end}!AI@{AI}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void AI::end ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAI_a67b00a8dd5c6d73db2e4e2332826462e}
+This function is called after the last turn. 
+
+Implements \hyperlink{classBaseAI_a60c8246a859ba2dba84b70239bc129bc}{BaseAI}.
+
+\hypertarget{classAI_a8c8e3a635791abaa61585357e6a25f63}{
+\index{AI@{AI}!init@{init}}
+\index{init@{init}!AI@{AI}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void AI::init ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAI_a8c8e3a635791abaa61585357e6a25f63}
+This function is run once, before your first turn. 
+
+Implements \hyperlink{classBaseAI_a90ce8becd6f2e32c2cc32d41145e88df}{BaseAI}.
+
+\hypertarget{classAI_aa4e58e11bbbdb040e6b12f8706763a00}{
+\index{AI@{AI}!password@{password}}
+\index{password@{password}!AI@{AI}}
+\subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ AI::password ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAI_aa4e58e11bbbdb040e6b12f8706763a00}
+Make this your password, which should be provided. 
+
+Implements \hyperlink{classBaseAI_a9251e20447917cda64ad1487b903456f}{BaseAI}.
+
+\hypertarget{classAI_a3c4746756b699cee5225597506521a39}{
+\index{AI@{AI}!run@{run}}
+\index{run@{run}!AI@{AI}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}bool AI::run ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAI_a3c4746756b699cee5225597506521a39}
+This function is called each time it is your turn Return true to end your turn, return false to ask the server for updated information 
+
+Implements \hyperlink{classBaseAI_ad60148e7e9e450ce47432b07b4db1ed6}{BaseAI}.
+
+\hypertarget{classAI_a529ac74a6f88a82abb1edd87847203e1}{
+\index{AI@{AI}!username@{username}}
+\index{username@{username}!AI@{AI}}
+\subsubsection[{username}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ AI::username ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAI_a529ac74a6f88a82abb1edd87847203e1}
+Make this your username, which should be provided. 
+
+Implements \hyperlink{classBaseAI_aef082fbf306fec04515ed5ed3b1ba582}{BaseAI}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+AI.h\item 
+AI.cpp\end{DoxyCompactItemize}
